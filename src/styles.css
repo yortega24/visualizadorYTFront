@@ -3,3 +3,20 @@
 html,body{
     height: 100%;
 }
+.wrapper{
+    background-color: beige;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    height: 180px;
+    margin-bottom: 10px;
+}
+.body{
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+}

@@ -1,1 +1,25 @@
-<p>sign-in works!</p>
+
+
+<div class="wrapper">
+    <div class="body">
+        <!--<img class="logo" src="assets/img/usuario.png" alt="LoginImg">-->
+        <h1>Registrar</h1>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+            <label for="floatingInput">Usuario</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingPassword" placeholder="Repetir password">
+            <label for="floatingPassword">Repetir Password</label>
+        </div>
+        <div >
+            <button type="button" class="btn btn-outline-primary" routerLink="/dashboard">Aceptar</button>
+        </div>
+        <p><a routerLink="/login">Regresar</a></p>
+      </div>
+      <router-outlet></router-outlet>
+</div>

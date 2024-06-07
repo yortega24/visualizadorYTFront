@@ -1,8 +1,10 @@
+
+
 <div class="wrapper">
     <div class="body">
         <img class="logo" src="assets/img/usuario.png" alt="LoginImg">
         <h1>Login</h1>
-        <div class="form-floating mb-3">
+        <div class="form-floating mb-3 mt-3">
             <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
             <label for="floatingInput">Usuario</label>
         </div>
@@ -11,8 +13,10 @@
             <label for="floatingPassword">Password</label>
         </div>
         <div >
-            <button type="button" class="btn btn-outline-primary">Login</button>
+            <button type="button" class="btn btn-outline-primary" routerLink="/dashboard">Login</button>
         </div>
-        <p>¿Eres nuevo? <a href="">Registrar</a></p>
+        <p>¿Eres nuevo? 
+            <a routerLink="/signIn">Registrar</a></p>
       </div>
+      <router-outlet></router-outlet>
 </div>
