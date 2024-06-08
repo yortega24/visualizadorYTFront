@@ -5,21 +5,25 @@
         <!--<img class="logo" src="assets/img/usuario.png" alt="LoginImg">-->
         <h1>Registrar</h1>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingInput" placeholder="Usuario">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Usuario" [formControl]="nombreUsr">
             <label for="floatingInput">Usuario</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingPassword" placeholder="Password">
+            <input  type="password" class="form-control" id="floatingPassword" placeholder="Password"  [formControl]="psw">
             <label for="floatingPassword">Password</label>
         </div>
         <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingPassword" placeholder="Repetir password">
+            <input  type="password" class="form-control" id="floatingPassword" placeholder="Repetir password" [formControl]="confirmpsw" >
             <label for="floatingPassword">Repetir Password</label>
         </div>
         <div >
-            <button type="button" class="btn btn-outline-primary" routerLink="/dashboard">Aceptar</button>
-        </div>
+            <button type="button" class="btn btn-outline-primary" (click)="agregar()" >Aceptar</button>
+                                                                <!--routerLink="/dashboard" -->
+        </div>                                                                   
         <p><a routerLink="/login">Regresar</a></p>
       </div>
+      
       <router-outlet></router-outlet>
+      
+     
 </div>
