@@ -17,6 +17,11 @@ export class UserSrvService {
   }
 
   singIn(user: Usuario): Observable<any>{
-    return this.http.post(`${this.myAppUrl}${this.myApiUrl}`,user);
+    return this.http.post(`${this.myAppUrl}${this.myApiUrl}newUsr`,user);
+  }
+
+    //observable sera el token
+  login(user: Usuario): Observable<string>{
+    return this.http.post<string>(`${this.myAppUrl}${this.myApiUrl}login`,user)
   }
 }

@@ -1,7 +1,7 @@
 
 
 <div class="wrapper">
-    <div class="body">
+    <div *ngIf="!loading" class="body">
         <!--<img class="logo" src="assets/img/usuario.png" alt="LoginImg">-->
         <h1>Registrar</h1>
         <div class="form-floating mb-3">
@@ -25,5 +25,5 @@
       
       <router-outlet></router-outlet>
       
-     
+     <app-spinner *ngIf="loading"></app-spinner>
 </div>
