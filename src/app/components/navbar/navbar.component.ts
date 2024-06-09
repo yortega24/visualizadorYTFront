@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet,Router  } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -10,5 +10,12 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
+
+  constructor(private router: Router) { }
+
+  logOut() {
+    localStorage.removeItem('token');
+    this.router .navigate(['/login'])
+  }
 
 }

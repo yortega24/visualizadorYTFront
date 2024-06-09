@@ -56,7 +56,7 @@ export class LoginComponent implements OnInit{
       next:(token) =>{
         this.loading=false;
         this.route.navigate(['/dashboard']);
-        localStorage.setItem('token',token)
+        localStorage.setItem('token',JSON.stringify(token))
       },
       error:(e:HttpErrorResponse) => {
         this.loading=false;
@@ -74,7 +74,7 @@ export class LoginComponent implements OnInit{
         
         //this.route.navigate(['/signIn'])
       },
-      complete:() => console.info('completado')
+      //complete:() => console.info('completado')
     
     
     })
